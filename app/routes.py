@@ -1,8 +1,8 @@
 from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app import db
-from app.forms import LoginForm, RegistrationForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, SubscribeForm
+from app.models import User, UserEmail
 from flask_login import current_user, login_user
 from flask_login import logout_user
 from flask_login import login_required
@@ -12,28 +12,28 @@ from werkzeug.urls import url_parse
 @app.route('/')
 @app.route('/index')
 #@login_required #remove this to remove login requirement for a page
-def index():
-	user = {'username' : 'Yewz'}
-	posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-	return render_template('index.html', title='Home', posts=posts)
+def index():	
+	return render_template('index.html', title='Home', subscribe_form=SubscribeForm())
 
+@app.route('/subscribe', methods=['GET', 'POST'])
+def subscribe():
+	form = SubscribeForm()
+	if form.validate_on_submit():
+		email_addr = UserEmail(email_addr=form.email_addr.data)
+		db.session.add(email_addr)
+		db.session.commit()
+		flash('Thank you for subscribing')
+		
+		return redirect(url_for('index'))
+	return render_template('register.html', title='Subscribe', form=form)
+	
 @app.route('/register', methods=['GET', 'POST'])
 def register():
 	if current_user.is_authenticated:
 		return redirect(url_for('index'))
 	form = RegistrationForm()
 	if form.validate_on_submit():
-		user = User(username=form.username.data, email=form.email.data)
-		user.set_password(form.password.data)
+		user = Email(email=form.email.data)
 		db.session.add(user)
 		db.session.commit()
 		flash('Thank you for registering!')
