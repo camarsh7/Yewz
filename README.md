@@ -1,2 +1,2 @@
 # Yewz
-http://paletton.com/export/index.php for colors.
+http://paletton.com/#uid=13h0u0krxwFh0L-moCEvaqnxDjn for colors.
