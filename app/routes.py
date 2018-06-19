@@ -14,8 +14,12 @@ from werkzeug.urls import url_parse
 #@login_required #remove this to remove login requirement for a page
 def index():	
 	return render_template('index.html', title='Home', subscribe_form=SubscribeForm())
+	
+@app.route('/biography')
+def biography():
+	return render_template('biography.html', title='Biography')
 
-@app.route('/subscribe', methods=['GET', 'POST'])
+@app.route('/contact', methods=['GET', 'POST'])
 def subscribe():
 	form = SubscribeForm()
 	if form.validate_on_submit():
@@ -24,8 +28,8 @@ def subscribe():
 		db.session.commit()
 		flash('Thank you for subscribing')
 		
-		return redirect(url_for('index'))
-	return render_template('register.html', title='Subscribe', form=form)
+		return redirect(url_for('subscribe'))
+	return render_template('contact.html', title='Subscribe', form=form)
 	
 @app.route('/register', methods=['GET', 'POST'])
 def register():

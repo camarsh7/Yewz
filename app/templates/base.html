@@ -15,6 +15,7 @@
 {% endblock %}
 
 {% block navbar %}
+<div class="wrapper">
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
@@ -53,7 +54,8 @@
 			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{url_for('index')}}">Home</a></li>
+					<li><a href="{{url_for('biography')}}">Biography</a></li>
+					<li><a href="{{url_for('subscribe')}}">Contact</a></li>
 				</ul>
 				<!-- <ul class="nav navbar-nav navbar-right"> -->
 					<!-- {% if current_user.is_anonymous %} -->
@@ -68,25 +70,50 @@
 	{% endblock %}
 	
 	{% block content %}
-		<div class="container-fluid">
-			{% with messages = get_flashed_messages() %}
-			{% if messages %}
-				{% for message in messages %}
-				<div class="alert alert-info" role="alert">{{message}}</div>
-				{% endfor %}
-			{% endif %}
-			{% endwith %}
-			{% block app_content %}
-			{% endblock %}
-		</div>
+		
+			<div class="container-fluid">
+				{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+					<div class="alert alert-info" role="alert">{{message}}</div>
+					{% endfor %}
+				{% endif %}
+				{% endwith %}
+				{% block app_content %}
+				{% endblock %}
+			</div>
+		
 		
 		{%- block footer %}
-		<footer class="footer">
+		</div>
+		<div class="footer">
 			<div class="container">
+				<div class="socials-centered">
+					<a class="header-nav-item" href="https://twitter.com/YewzOfficial/" target="_blank">
+						<i class="fab fa-twitter fa-1x" aria-hidden="true"></i>
+					</a>
+					
+					<a class="header-nav-item" href="https://www.facebook.com/YewzOfficial/" target="_blank">
+						<i class="fab fa-facebook-f fa-1x" aria-hidden="true"></i>
+					</a>
+					
+					<a class="header-nav-item" href="https://soundcloud.com/YewzOfficial/" target="_blank">
+						<i class="fab fa-soundcloud fa-1x" aria-hidden="true"></i>
+					</a>
+					
+					<a class="header-nav-item" href="https://open.spotify.com/artist/4iooZexWDDgcNGMhwx4Itw?si=IytQTlLpTo6KQZCDNRnt4A" target="_blank">
+						<i class="fab fa-spotify fa-1x" aria-hidden="true"></i>
+					</a>
+					
+					<a class="header-nav-item" href="https://itunes.apple.com/us/artist/yewz/1374752933" target="_blank">
+						<i class="fab fa-apple fa-1x" aria-hidden="true"></i>
+					</a>
+				</div>
+			
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<p class="h6">&copy; 2018 - Yewz Official</p>
 				</div>	
 			</div>
-		</section>
+		</div>
 		{%- endblock footer %}
 	{% endblock %}

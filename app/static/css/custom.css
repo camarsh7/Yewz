@@ -1,27 +1,42 @@
-body {
+body, html {
 	background-color: #005E5A;
+	height: 100%;
+
+}
+
+.wrapper {
+	min-height: 100%;
 }
 
 .h6, .h5, .h4, .h3, .h2, .h1 {
 	color: #fdfdfd;
 }
 
-h1, h2, h3, h4, h5, h6, label{
+h1, h2, h3, h4, h5, h6, label, p{
 	color: #fdfdfd;
 }
+
+.jumbotron {
+	background-color: #fdfdfd;
+}
+
+.jumbotron h1, h2, h3, h4, h5, h6, label, p {
+	color: black;
+}	
 
 a:hover {
 	color: #005E5A;
 }
 
-.btn-primary {
+.btn-primary, .btn-default {
     color: #fff;
     background-color: #36B3AE;
     border-color: #005E5A;
 }
 
-.btn-primary:hover {
+.btn-primary:hover , .btn-default:hover{
 	background-color: #005E5A;
+	color: #fdfdfd;
 }
 
 .container-fluid {
@@ -31,6 +46,25 @@ a:hover {
 
 .container-fluid .jumbotron {
 	border-radius: 0px;
+}
+
+.form {
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+.form .form-group {
+	
+}
+
+.form label {
+	
+}
+
+.form .btn-default {
+	
+
 }
 
 .navbar {
@@ -96,12 +130,9 @@ a:hover {
 
 .footer {
 	background-color: #169D98;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	position: fixed;
-	display: flex;
-	align-items: center;
+    width: 100%;
+    height: 60px;
+
 }
 
 .header-nav-item { 
