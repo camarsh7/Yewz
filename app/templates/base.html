@@ -8,6 +8,7 @@
       href="{{url_for('static', filename='css/custom.css')}}">
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
 {% endblock %}
 
 {% block title %}
@@ -54,6 +55,7 @@
 			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
+					<li><a href="{{url_for('index')}}">Home</a></li>
 					<li><a href="{{url_for('biography')}}">Biography</a></li>
 					<li><a href="{{url_for('subscribe')}}">Contact</a></li>
 				</ul>

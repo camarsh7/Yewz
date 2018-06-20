@@ -92,3 +92,4 @@ Traceback (most recent call last):
   File "c:\users\cmarsh\appdata\local\programs\python\python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
     _mysql.connection.query(self, query)
 sqlalchemy.exc.IntegrityError: (_mysql_exceptions.IntegrityError) (1062, "Duplicate entry 'test@test.com' for key 'PRIMARY'") [SQL: 'INSERT INTO user_email (email_addr) VALUES (%s)'] [parameters: ('test@test.com',)] (Background on this error at: http://sqlalche.me/e/gkpj)
+2018-06-20 09:24:18,066 INFO: Yewz Startup [in C:\Users\cmarsh\YewzOfficial\app\__init__.py:38]
