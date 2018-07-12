@@ -1,8 +1,31 @@
 body, html {
-	background-color: #005E5A;
+	/* background-color: #005E5A; */
+	background: url(../images/trees2.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	height: 100%;
 	font-family: 'Comfortaa', cursive;
 
+}
+
+img {
+	width: 100%;
+}
+
+.front-video {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 70%;
+}
+
+.jumbotron {
+	background:rgba(0,0,0,0.4);
+	color: #fdfdfd;
+	padding: 0;
+	margin: 0;
 }
 
 .wrapper {
@@ -19,13 +42,19 @@ h1, h2, h3, h4, h5, h6, label, p{
 	font-family: 'Comfortaa', cursive;
 }
 
-.jumbotron {
-	background-color: #fdfdfd;
+.main-header h1 {
+	font-weight: 500;
+	font-size: 48px;
 }
 
+
 .jumbotron h1, h2, h3, h4, h5, h6, label, p {
-	color: black;
-}	
+	color: #fdfdfd;
+}
+
+.jumbotron .bio {
+	background:rgba(255,255,255,0.8);
+}
 
 a:hover {
 	color: #005E5A;
@@ -58,35 +87,42 @@ a:hover {
 }
 
 .form .form-group {
-	
+
 }
 
 .form label {
-	
+
 }
 
 .form .btn-default {
-	
+
 
 }
 
 .navbar {
-	
+	margin: 0;
 }
 
 .navbar-default {
 	background-color: #169D98;
-	border-top: none;
+	border: none;
 	border-color: black;
 	border-radius: 0px;
 }
 
 .navbar-default .navbar-toggle {
 	border: none;
+	width: 50px;
+	height: 50px;
 	margin-top: 9px;
 	margin-bottom: 5px;
 	opacity: 1;
 	z-index: 1;
+}
+
+.navbar-toggle .icon-bar {
+	width: 100%;
+	height: 3px;
 }
 
 .navbar-default .navbar-toggle:focus {
@@ -94,7 +130,7 @@ a:hover {
 }
 
 .navbar-default .navbar-brand {
-	color: #fdfdfd;	
+	color: #fdfdfd;
 }
 
 .brand-centered {
@@ -145,7 +181,7 @@ a:hover {
         transform: translate(-50%, -50%);
 }
 
-.header-nav-item { 
+.header-nav-item {
 	color: #fdfdfd;
 }
 
@@ -214,7 +250,7 @@ a:hover {
         margin: 15px 0;
     }
     /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
+    .navbar-collapse.collapse.in {
         display: block!important;
     }
     .collapsing {
