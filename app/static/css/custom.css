@@ -14,6 +14,11 @@ img {
 	width: 100%;
 }
 
+.embed-responsive-item {
+	width: 50%;
+	margin: auto;
+}
+
 .front-video {
 	display: block;
     margin-left: auto;
@@ -47,6 +52,9 @@ h1, h2, h3, h4, h5, h6, label, p{
 	font-size: 48px;
 }
 
+.jumbotron .container {
+	max-width: 70%;
+}
 
 .jumbotron h1, h2, h3, h4, h5, h6, label, p {
 	color: #fdfdfd;
