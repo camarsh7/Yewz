@@ -154,12 +154,13 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	/* margin-bottom: 10px; */
 }
 
 .header-nav-item {
-	padding-left: 8px;
-	padding-right: 8px;
-	padding-bottom: 2px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 10px;
 }
 
 .navbar-brand {
