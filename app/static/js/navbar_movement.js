@@ -1,13 +1,18 @@
-function hideNav() {
-  var prevScrollPos = windows.pageYOffset;
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
-    }
-    else {
-      document.getElementById("navbar").style.top ="-50px";
-    }
-    prevScrollPos = currentScrollPos;
+$(document).ready(function() {
+  var $navbar = $("#mNavbar");
+
+  AdjustHeader(); // Incase the user loads the page from halfway down (or something);
+  $(window).scroll(function() {
+      AdjustHeader();
+  });
+
+  function AdjustHeader(){
+    if ($(window).scrollTop() > 60) {
+      if (!$navbar.hasClass("navbar-fixed-top")) {
+        $navbar.addClass("navbar-fixed-top");
+      }
+    } else {
+      $navbar.removeClass("navbar-fixed-top");
     }
   }
+});
