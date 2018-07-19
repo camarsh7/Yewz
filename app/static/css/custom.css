@@ -1,10 +1,10 @@
 /* Utility Styles */
 body, html {
-	background: url(../images/trees2.jpg) no-repeat center center fixed;
+	/* background: url(../images/trees2.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover; */
 	height: 100%;
 	font-family: 'Comfortaa', cursive;
 }
@@ -42,6 +42,12 @@ img {
 .wrapper {
 	min-height: 100%;
  	padding-top: 90px;
+	background: url(../images/trees2.jpg);
+	/* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container-fluid {
