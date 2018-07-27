@@ -1,44 +1,72 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-	<div class="jumbotron">
-		<div class="container" data-aos="fade-in">
-			<h2 class="animated bounce">What's new?</h2>
-			<div class="embed-responsive embed-responsive-16by9">
+<div class="jumbotron" id="homehero">
+	<div class="container aniview" data-av-animation="fadeIn">
+		<h1>I am Yewz.</h1>
+		<!-- <div class="main_subheading">
+			<h4>Let's journey through the soundwaves.</h4>
+		</div> -->
+	</div>
+</div>
+
+	<div class="jumbotron" id="whatsnew">
+		<div class="container aniview" data-av-animation="fadeIn">
+			<h2>Videos</h2>
+			<div class="embed-responsive embed-responsive-16by9 aniview" data-av-animation="fadeIn">
 				<iframe src="https://www.youtube.com/embed/l-f0NwASnLI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
+			<!-- <div class="container">
+					<div class="scroll">
+						<a class="ct-btn-scroll aniview" id="reallyslow" data-av-animation="animated infinite bounce" href="#mymusic"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+					</div>
+			</div> -->
 			<!-- <p><a class="btn btn-primary btn-lg" href="/contact" role = "button">Learn more</a></p> -->
 		</div>
 	</div>
 
-	<div class="jumbotron">
+	<div class="jumbotron" id="mymusic">
 		<div class="container">
-			<h2>Check out my tracks!</h2>
+			<div class="container-fluid aniview" data-av-animation="fadeIn">
+			<h2>Tunes</h2>
 			<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/331931490&color=%2361cfcb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 		</div>
+		<!-- <div class="container">
+				<div class="scroll">
+					<a class="ct-btn-scroll aniview" id="reallyslow" data-av-animation="animated infinite bounce" href="#biography"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+				</div>
+		</div> -->
+	</div>
 	</div>
 
-	<div class="jumbotron bio">
+	<div class="jumbotron" id="biography">
 		<div class="container">
-			<div class="row">
+			<div class="row aniview" data-av-animation="fadeIn">
 				<div class="col">
 					<div class="col-sm-6">
-						<h1>Who is Yewz?</h1>
-						<p>A new member of the production industry, and a long-time bass lover/electronic dance music fanatic, Yewz is born. Producing a mixture of mellow, intense, and uplifting tracks, Yewz is currently a student of ill.Gates' Class of 808 in efforts to constantly stride forward in order to produce more innovative and unique music in the electronica world.</p>
-						<p>He also plans to finish up his Bachelor's of Science in Computer Software Engineering this year, and eventually provide his development skills to the world on the side.</p>
+						<h2>Yewz who?</h2>
+						<p>A new member of the production industry, and a long-time bass lover/electronic dance music fanatic, Yewz is born. Producing a mixture of mellow, intense, and uplifting tracks, Yewz is also a student of ill.Gates in his Class of 808.</p>
+						<!-- <p>He also plans to finish up his Bachelor's of Science in Computer Software Engineering this year, and eventually provide his development skills to the world on the side.</p> -->
 					</div>
-					<div class="col-sm-6 image-container">
-						<img src="static/images/bio1.jpg" alt="Yewz Biography Photo 1" class="img-responsive" style="margin-top: 20px">
+					<div class="col-sm-6">
+						<img src="static/images/bio1.jpg" alt="Yewz Biography Photo 1" class="img-responsive" style="padding-top: 20px">
 					</div>
+					<!-- <div class="container">
+							<div class="scroll">
+								<a class="ct-btn-scroll aniview" id="reallyslow" data-av-animation="animated infinite bounce" href="#contact"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+							</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="jumbotron">
+	<div class="jumbotron" id="contact">
 		<div class="container">
-			<h1 align="center">Contact Yewz</h1>
-			<h5 align="center">Yewzofficial@gmail.com</p>
+			<h2 id="contact_heading" class="aniview" data-av-animation="fadeIn" align="center">Contact Information</h2>
+			<p class="aniview" data-av-animation="fadeIn" align="center">Management/Booking: Yewzofficial@gmail.com</p>
 		</div>
 	</div>
+
 {% endblock %}

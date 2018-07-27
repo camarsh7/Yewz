@@ -7,22 +7,37 @@ body, html {
 	background-size: cover; */
 	height: 100%;
 	font-family: 'Comfortaa', cursive;
+	background:rgba(0,0,0,0.4);
 }
+
+#homehero {
+  background: rgba(0,0,0,0.4);
+	height: 65vh;
+	width: 100%;
+}
+
 
 /* Media Styles (images, videos, embed stuff) */
 img {
 	width: 100%;
 }
 
+iframe {
+	background: none repeat scroll 0 0 #fdfdfd;
+	padding: 2px;
+}
+
 .embed-responsive-item {
 	width: 50%;
 	margin: auto;
+	background: none repeat scroll 0 0 #fdfdfd;
+	padding: 10px;
 }
 
 .front-video {
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 	width: 70%;
 }
 
@@ -31,8 +46,7 @@ img {
 	background:rgba(0,0,0,0.4);
 	color: black;
 	margin: 0;
-	/* padding: 20px; */
-	/* margin-bottom: 50px; */
+	padding-bottom: : 100px;
 }
 
 .jumbotron:last-child {
@@ -48,6 +62,48 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+		/* background-color: #fdfdfd; */
+}
+
+.overlay {
+	width: 100%;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.5);
+}
+.container {
+	max-width: 100%;
+	overflow: hidden;
+}
+#homehero {
+	 background-color: #fdfdfd;
+}
+
+#homehero .scroll {
+	height: 100%;
+}
+
+#whatsnew {
+	/* background:rgba(0,0,0,0.4); */
+	padding-top: 100px;
+	min-height: 70vh;
+}
+
+#mymusic {
+	/* background:rgba(0,0,0,0.4); */
+	min-height: 70vh;
+	padding-top: 100px;
+}
+
+#biography {
+	/* background:rgba(0,0,0,0.4); */
+	min-height: 70vh;
+	padding-top: 100px;
+}
+
+#contact {
+	/* background: rgba(0, 0, 0, 0.4); */
+	min-height: 50vh;
+	padding-top: 100px;
 }
 
 .container-fluid {
@@ -57,6 +113,8 @@ img {
 
 .container-fluid .jumbotron {
 	border-radius: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .jumbotron .container {
@@ -67,28 +125,58 @@ img {
 	color: #fdfdfd;
 }
 
-.jumbotron .bio {
-	background:rgba(255,255,255,0.8);
+#biography {
+	width: 100%;
 }
 
 /* TYPOGRAPHY, LINKS, AND BUTTONS */
 .h6, .h5, .h4, .h3, .h2, .h1 {
 	color: #fdfdfd;
 	font-family: 'Comfortaa', cursive;
+	/* font-family: 'Paytone One', sans-serif; */
 }
 
 h1, h2, h3, h4, h5, h6, label, p{
 	color: #fdfdfd;
 	font-family: 'Comfortaa', cursive;
+	/* font-family: 'Paytone One', sans-serif; */
+}
+
+.container h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#homehero h1 {
+	/* font-size: 100px; */
+  /* font-family: 'Paytone One', sans-serif; */
+	color: black;
+	font-family: 'Quicksand', sans-serif;
+	line-height: 0.9;
+	text-align: center;
+}
+
+#homehero .main_subheading {
+	font-family: 'Quicksand', sans-serif;
+	float: left;
+	padding-left: 135px;
+	margin-top: 0;
+
 }
 
 .main-header h1 {
 	font-weight: 500;
-	font-size: 48px;
+	/* font-size: 48px; */
+}
+
+.jumbotron h2 {
+	/* font-size: 48px; */
+	padding-bottom: 25px;
+	/* background-color: rgba(0, 0, 0, 0.8); */
 }
 
 a:hover {
-	color: #005E5A;
+	color: #61cfcb;
 }
 
 .btn-primary, .btn-default {
@@ -102,12 +190,15 @@ a:hover {
 	color: #fdfdfd;
 }
 
+
 /* NAVIGATION BAR STYLES BELOW */
 .navbar {
 	display:flex;
 	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
 	/* background-color: #169D98;*/
-	background:rgba(0,0,0,0.4);
+	background:rgba(0,0,0,0.9);
 	border: none;
 	border-color: black;
 	border-radius: 0px;
@@ -123,6 +214,9 @@ a:hover {
 	display: flex;
 	align-items: center;
 	color: #fdfdfd;
+	font-size: 30px;
+	font-weight: 400;
+	font-family: 'Quicksand', sans-serif;
 }
 
 .brand-centered {
@@ -137,10 +231,12 @@ a:hover {
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 10px;
+	transition: all .2s ease-in-out;
 }
 
 .header-nav-item:hover {
-	color: #005E5A;
+	color: #61cfcb;
+	transform: scale(1.1);
 }
 
 .socials-centered {
@@ -152,7 +248,7 @@ a:hover {
 /* FOOTER STYLES GO HERE  */
 .footer {
 	position: relative;
-	background:rgba(0,0,0,0.4);
+	background:rgba(0,0,0,0.9);
   width: 100%;
   height: 80px;
 }
@@ -166,4 +262,16 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* ANIMATION STYLES */
+#contact_heading {
+	-webkit-animation-duration: 1s;
+-moz-animation-duration: 1;
+-ms-transition-animation-duration: 1s;
+}
+
+#reallyslow{
+    animation-duration: 3s;
+    animation-delay: 2s;
 }

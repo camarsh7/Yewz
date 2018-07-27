@@ -4,20 +4,34 @@
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" type="text/css"
-      href="{{url_for('static', filename='css/custom.css')}}">
 <!-- Add icon library -->
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}">
 {% endblock %}
 
 {% block scripts %}
 {{super()}}
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/jquery-aniview@1.0.1/dist/jquery.aniview.js"
+integrity="sha384-zDA6q/t525x7f6KD/OaOe24vCxSPU3eraILc2NU+ZA7ISsc3ExQbj8PB56FRMq6H"
+crossorigin="anonymous"></script>
+<script src="{{url_for('static', filename='js/scroll-down.js')}}"></script>
+
 <script>
-  AOS.init();
+var options = {
+
+    // delay the animation sequence until '100' pixels have come into view
+    animateThreshold: 50,
+
+    // The frequency of which the user scrolling is 'tested'.
+    scrollPollInterval: 1
+}
+$('.aniview').AniView(options);
 </script>
 {% endblock %}
 
@@ -27,9 +41,10 @@
 
 {% block navbar %}
 <div class="wrapper">
+  <div class="overlay">
 	<nav class="navbar navbar-fixed-top">
 			<div class="brand-centered">
-				<a class="navbar-brand" href="{{url_for('index')}}">Yewz Official</a>
+				<a class="navbar-brand" href="{{url_for('index')}}">Yewz</a>
 
 			</div>
 			<div class="socials-centered">
@@ -118,6 +133,7 @@
 			</div>
 		</div>
     </div>
+  </div>
 		{%- endblock footer %}
 
 	{% endblock %}
