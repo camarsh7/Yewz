@@ -12,7 +12,7 @@ body, html {
 
 #homehero {
   background: rgba(0,0,0,0.4);
-	height: 65vh;
+	min-height: 65vh;
 	width: 100%;
 }
 
@@ -22,9 +22,14 @@ img {
 	width: 100%;
 }
 
-iframe {
+.video iframe {
 	background: none repeat scroll 0 0 #fdfdfd;
-	padding: 2px;
+	padding: 1px;
+}
+
+.image {
+	background: none repeat scroll 0 0 #fdfdfd;
+	padding: 1px;
 }
 
 .embed-responsive-item {
@@ -39,6 +44,13 @@ iframe {
   margin-left: auto;
   margin-right: auto;
 	width: 70%;
+}
+
+.spotify-follow iframe {
+	/* width: 90%; */
+	padding-left: 5%;
+	min-width: 300px;
+	display:inline-block;
 }
 
 /* Container styles */
@@ -69,6 +81,12 @@ iframe {
 	width: 100%;
 	margin: 0 auto;
 	background: rgba(0, 0, 0, 0.5);
+}
+
+.slogan {
+	width: 90%;
+	margin: 0 auto;
+
 }
 .container {
 	max-width: 100%;
@@ -119,6 +137,7 @@ iframe {
 
 .jumbotron .container {
 	max-width: 70%;
+	text-align: center;
 }
 
 .jumbotron h1, h2, h3, h4, h5, h6, label, p {
@@ -145,6 +164,10 @@ h1, h2, h3, h4, h5, h6, label, p{
 .container h2 {
 	text-align: center;
 	text-decoration: underline;
+}
+
+.slogan h1 {
+	font-size: 72px;
 }
 
 #homehero h1 {
@@ -244,6 +267,18 @@ a:hover {
 	justify-content: center;
 	width: 100%;
 }
+
+.spotify-follow {
+	width: 90%;
+	min-width: 313px;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding-top: 5px;
+	background:rgba(0,0,0,0.9);
+	text-align: center;
+
+}
+
 
 /* FOOTER STYLES GO HERE  */
 .footer {
